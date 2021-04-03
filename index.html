@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Currículo</title>
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.3/css/all.css" integrity="sha384-SZXxX4whJ79/gErwcOYf+zWLeJdY/qpuqC4cAa9rOGUstPomtqpuNWT9wdPEn2fk" crossorigin="anonymous" />
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@622&display=swap" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@300&display=swap" rel="stylesheet">
+
+
+</head>
+
+<body>
+    <main class="grid-container">
+        <header id="menu">
+            <div class="image">
+                <img src="img/profile.jpg" />
+            </div>
+            <nav>
+                <ul>
+                    <li class="li_menu">
+                        <a href="#tabs1-conteudo" id="defaultOpen" onclick="openPage('Home', this, 'red')">
+                            <i class="fas fa-user fa-4x"></i>
+                            <span class="spanPrincipal">Sobre mim</span>
+                            <span class="spanSecundario">HO I AM</span>
+                        </a>
+                    </li>
+                    <li class="li_menu">
+                        <a href="#tabs1-resumo" onclick="openPage('News', this, 'red')">
+                            <i class="fas fa-briefcase fa-4x"></i>
+                            <span class="spanPrincipal">Resumo</span>
+                            <span class="spanSecundario">curriculum vita</span>
+                        </a>
+                    </li>
+                    <li class="li_menu">
+                        <a href="#">
+                            <i class="fas fa-camera fa-4x"></i>
+                            <span class="spanPrincipal">Portifolio</span>
+                            <span class="spanSecundario">My Works</span>
+                        </a>
+                    </li>
+                    <li class="li_menu">
+                        <a href="#">
+                            <i class="fas fa-chart-pie fa-4x"></i>
+                            <span class="spanPrincipal">Habilidades</span>
+                            <span class="spanSecundario">My Skills</span>
+                        </a>
+                    </li>
+                    <li class="li_menu">
+                        <a href="#">
+                            <i class="fas fa-phone-alt fa-4x"></i>
+                            <span class="spanPrincipal">Contato</span>
+                            <span class="spanSecundario">Olá mundo</span>
+                        </a>
+                    </li>
+                </ul>
+            </nav>
+        </header>
+        <section id="conteudo">
+            <article id="Home" class="tabcontent">
+                <h1>Adolfo Poiatti</h1>
+                <h3>Desenvolvedor .NET</h3>
+                <section id="about-me">
+
+                    <div class="titulo-about">
+                        <h2 class="h2-before">About Me</h2>
+                    </div>
+
+
+                    <p id="conteudo-about">"Sou apaixonado por aprender novas tecnologias e por sempre estar aperfeiçoando minhas habilidades. Nas horas vagas gosto de estudar e ouvir música para relaxar. Atualmente moro em Três Fronteiras,SP"</p>
+
+                </section>
+                <section id="personal-info">
+                    <div class="titulo-about">
+                        <h2 class="h2-before">Personal Info</h2>
+                    </div>
+                    <div id="content-personal">
+                        <ul id="float-left-personal">
+                            <li>Nome</li>
+                            <li>Aniversário</li>
+                            <li>Nacionalidade</li>
+                            <li>Estado civil</li>
+                        </ul>
+                        <ul id="float-right-personal">
+                            <li>Adolfo da S. Poiatti</li>
+                            <li>08/07/1999</li>
+                            <li>Brasileiro</li>
+                            <li>Solteiro</li>
+                        </ul>
+                    </div>
+
+
+                </section>
+                <section id="contact-info">
+                    <div class="titulo-about">
+                        <h2 class="h2-before">Contact Info</h2>
+                    </div>
+
+                    <div id="content-contact">
+                        <ul id="float-left-contact">
+                            <li>E-mail</li>
+                            <li>LinkedIn</li>
+                            <li>Pinterest</li>
+                        </ul>
+                        <ul id="float-right-contact">
+                            <li><a href="mailto:adolfo.poiatti@fatec.sp.gov.br">Enviar um e-mail</a></li>
+                            <li><a href="https://www.linkedin.com/in/adolfo-poiatti-591b79150/" target="_blank">Visualizar perfil</li>
+                            <li><a href="https://www.pinterest.pt/Fortaleza_da_Solidao/_saved/" target="_blank">Visualizar perfil</a></li>
+                        </ul>
+                    </div>
+                </section>
+
+            </article>
+            <article id="News" class="tabcontent">Resumo</article>
+
+            <footer>
+
+            </footer>
+        </section>
+
+    </main>
+
+    <script>
+        window.onclick = (event) => {
+            var ele = event.target;
+            var parents = ele.parentNode;
+            if (event.target.tagName == "A") {
+                var elementos = document.getElementsByClassName("active"); // ou:
+                for (var i = 0; i < elementos.length; i++) {
+                    elementos[i].classList.remove("active");
+                }
+                event.target.classList.add("active");
+            }
+            parents.click();
+
+
+        };
+
+        function openPage(pageName, elmnt, color) {
+            // Hide all elements with class="tabcontent" by default */
+            var i, tabcontent, tablinks;
+            tabcontent = document.getElementsByClassName("tabcontent");
+            for (i = 0; i < tabcontent.length; i++) {
+                tabcontent[i].style.display = "none";
+            }
+            document.getElementById(pageName).style.display = "block";
+        }
+        document.getElementById("defaultOpen").click();
+    </script>
+</body>
+
+</html>

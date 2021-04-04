@@ -11,6 +11,62 @@
             text-align: center;
         }
         
+        @mixin h1_section {
+            text-align: center;
+            font-family: 'Roboto Slab', serif;
+            font-size: 50px;
+            margin: 50px 0px 0px 0px;
+        }
+        
+        @mixin h3_section {
+            text-align: center;
+            font-family: 'Roboto Slab', serif;
+            color: #999;
+            font-size: 17px;
+        }
+        
+        @mixin h2_before {
+            content: "";
+            background-color: #ffd42d;
+            width: 20px;
+            height: 8px;
+            z-index: 10;
+            position: absolute;
+            bottom: 30px;
+            left: 49%;
+        }
+        
+        @mixin ul-left {
+            top: -16px;
+            float: left;
+            margin-left: -8%;
+            padding-right: 18px;
+            position: relative;
+            text-align: right;
+            width: 53%;
+            list-style: none;
+            line-height: 28px;
+        }
+        
+        @mixin ul-right {
+            margin-left: 95px;
+            list-style: none;
+            padding-right: 18px;
+            position: relative;
+            text-align: left;
+            width: 63%;
+        }
+        
+        @mixin li-height {
+            height: 100px;
+        }
+        
+        @mixin span-prof($color) {
+            background-color: $color;
+            border-radius: 5px;
+            padding: 3px;
+        }
+        
         .grid-container {
             display: grid;
             grid-template-columns: 1fr 5fr;
@@ -30,6 +86,14 @@
             background-color: #FFFFFF;
             height: 160vh;
             article#Home {
+                section.session-finale {
+                    padding-top: 140px;
+                    padding-left: 48%;
+                    p {
+                        font-family: 'Source Sans Pro', sans-serif;
+                        font-weight: bolder;
+                    }
+                }
                 p#conteudo-about {
                     padding: 0px 80px;
                     font-size: 16px;
@@ -40,31 +104,18 @@
                     color: #999;
                 }
                 h1 {
-                    text-align: center;
-                    font-family: 'Roboto Slab', serif;
-                    font-size: 50px;
-                    margin: 50px 0px 0px 0px;
+                    @include h1_section();
                 }
                 .h2-before {
                     position: relative;
                     font-family: 'Roboto Slab', serif;
                     font-size: 18px;
                     &::before {
-                        content: "";
-                        background-color: #ffd42d;
-                        width: 20px;
-                        height: 8px;
-                        z-index: 10;
-                        position: absolute;
-                        bottom: 30px;
-                        left: 49%;
+                        @include h2_before();
                     }
                 }
                 h3 {
-                    text-align: center;
-                    font-family: 'Roboto Slab', serif;
-                    color: #999;
-                    font-size: 17px;
+                    @include h3_section();
                 }
                 section#about-me {
                     @include section_content();
@@ -75,28 +126,14 @@
                         margin-top: 80px;
                     }
                     ul#float-left-personal {
-                        top: -16px;
-                        float: left;
-                        margin-left: -8%;
-                        padding-right: 18px;
-                        position: relative;
-                        text-align: right;
-                        width: 53%;
-                        list-style: none;
-                        line-height: 35px;
+                        @include ul-left();
                         li {
                             font-family: 'Roboto Slab', serif;
                             font-size: 15px;
                         }
                     }
                     ul#float-right-personal {
-                        margin-left: 95px;
-                        list-style: none;
-                        padding-right: 18px;
-                        position: relative;
-                        text-align: left;
-                        width: 63%;
-                        line-height: 35px;
+                        @include ul-right();
                         li {
                             font-family: 'Roboto Slab', serif;
                             font-size: 15px;
@@ -162,6 +199,56 @@
                         top: 1150px;
                         width: 1px;
                         z-index: 0;
+                    }
+                }
+            }
+            article#resume {
+                h1 {
+                    @include h1_section();
+                }
+                .titulo-about {
+                    h2 {
+                        text-align: center;
+                        position: relative;
+                        font-family: 'Roboto Slab', serif;
+                        font-size: 18px;
+                        &::before {
+                            @include h2_before();
+                        }
+                    }
+                }
+                h3 {
+                    @include h3_section();
+                }
+                section#experience {
+                    @include section_content();
+                }
+                div#content-resume {
+                    ul#float-left-resume {
+                        @include ul-left();
+                        li {
+                            font-weight: bolder;
+                            @include li-height();
+                            span#current {
+                                @include span-prof(#ffd42d);
+                            }
+                            span.data {
+                                @include span-prof(black);
+                                color: white;
+                            }
+                        }
+                    }
+                    ul#float-right-resume {
+                        @include ul-right();
+                        li {
+                            line-height: 25px;
+                            @include li-height();
+                            span.profissao {
+                                @include span-prof(darkorange);
+                                color: black;
+                                font-weight: bolder;
+                            }
+                        }
                     }
                 }
             }

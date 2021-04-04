@@ -100,6 +100,7 @@ section#conteudo article#Home section#personal-info ul#float-right-personal li {
   font-size: 15px;
   color: #999;
   font-weight: 200;
+  line-height: 28px;
 }
 section#conteudo article#Home section#personal-info::after {
   background-color: #eaeaea;
@@ -211,12 +212,12 @@ section#conteudo article#resume div#content-resume ul#float-left-resume li {
 section#conteudo article#resume div#content-resume ul#float-left-resume li span#current {
   background-color: #ffd42d;
   border-radius: 5px;
-  padding: 3px;
+  padding: 4px;
 }
 section#conteudo article#resume div#content-resume ul#float-left-resume li span.data {
   background-color: black;
   border-radius: 5px;
-  padding: 3px;
+  padding: 4px;
   color: white;
 }
 section#conteudo article#resume div#content-resume ul#float-right-resume {
@@ -234,7 +235,7 @@ section#conteudo article#resume div#content-resume ul#float-right-resume li {
 section#conteudo article#resume div#content-resume ul#float-right-resume li span.profissao {
   background-color: darkorange;
   border-radius: 5px;
-  padding: 3px;
+  padding: 4px;
   color: black;
   font-weight: bolder;
 }
@@ -411,6 +412,14 @@ header#menu ul li.li_menu a.active::after {
     content: "";
     background-color: transparent;
   }
+
+  ul#float-right-resume li {
+    height: 155px !important;
+  }
+
+  ul#float-left-resume li {
+    height: 155px !important;
+  }
 }
 @media only screen and (min-width: 1230px) and (max-width: 1300px) {
   section#conteudo article#Home section#personal-info::after {
@@ -442,7 +451,7 @@ header#menu ul li.li_menu a.active::after {
   section#conteudo article#Home section#personal-info::after {
     background-color: #eaeaea;
     content: " ";
-    height: 23%;
+    height: 19%;
     left: 56.5vw;
     position: absolute;
     top: 690px;
@@ -452,10 +461,10 @@ header#menu ul li.li_menu a.active::after {
   section#conteudo article#Home section#contact-info::after {
     background-color: #eaeaea;
     content: " ";
-    height: 18%;
+    height: 16%;
     left: 56.5vw;
     position: absolute;
-    top: 1090px;
+    top: 1060px;
     width: 1px;
     z-index: 0;
   }

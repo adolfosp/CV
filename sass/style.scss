@@ -64,7 +64,7 @@
         @mixin span-prof($color) {
             background-color: $color;
             border-radius: 5px;
-            padding: 3px;
+            padding: 4px;
         }
         
         .grid-container {
@@ -139,6 +139,7 @@
                             font-size: 15px;
                             color: #999;
                             font-weight: 200;
+                            line-height: 28px;
                         }
                     }
                     &::after {
@@ -429,6 +430,16 @@
                     }
                 }
             }
+            ul#float-right-resume {
+                li {
+                    height: 155px !important;
+                }
+            }
+            ul#float-left-resume {
+                li {
+                    height: 155px !important;
+                }
+            }
         }
         
         @media only screen and(min-width: 1230px) and (max-width: 1300px) {
@@ -472,7 +483,7 @@
                         &::after {
                             background-color: #eaeaea;
                             content: " ";
-                            height: 23%;
+                            height: 19%;
                             left: 56.5vw;
                             position: absolute;
                             top: 690px;
@@ -484,10 +495,10 @@
                         &::after {
                             background-color: #eaeaea;
                             content: " ";
-                            height: 18%;
+                            height: 16%;
                             left: 56.5vw;
                             position: absolute;
-                            top: 1090px;
+                            top: 1060px;
                             width: 1px;
                             z-index: 0;
                         }

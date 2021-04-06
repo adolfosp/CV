@@ -158,9 +158,17 @@ section#conteudo article#Home section#contact-info::after {
   height: 18%;
   left: 55.5vw;
   position: absolute;
-  top: 1150px;
+  top: 1120px;
   width: 1px;
   z-index: 0;
+}
+section#conteudo article#resume section.session-finale {
+  padding-top: 140px;
+  padding-left: 48%;
+}
+section#conteudo article#resume section.session-finale p {
+  font-family: "Source Sans Pro", sans-serif;
+  font-weight: bolder;
 }
 section#conteudo article#resume h1 {
   text-align: center;
@@ -373,7 +381,7 @@ header#menu ul li.li_menu a.active::after {
   max-width: 100%;
 }
 
-@media only screen and (max-width: 900px) {
+@media only screen and (max-width: 1200px) {
   body {
     margin: 70px 120px 70px 120px;
   }

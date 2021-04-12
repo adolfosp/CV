@@ -15,7 +15,6 @@ body {
 section#conteudo {
   grid-area: conteudo;
   background-color: #FFFFFF;
-  height: 160vh;
 }
 section#conteudo article#Home section.session-finale {
   padding-top: 140px;
@@ -75,7 +74,7 @@ section#conteudo article#Home section#personal-info #content-personal {
 section#conteudo article#Home section#personal-info ul#float-left-personal {
   top: -16px;
   float: left;
-  margin-left: -8%;
+  margin-left: -2%;
   padding-right: 18px;
   position: relative;
   text-align: right;
@@ -205,7 +204,7 @@ section#conteudo article#resume section#experience {
 section#conteudo article#resume div#content-resume ul#float-left-resume {
   top: -16px;
   float: left;
-  margin-left: -8%;
+  margin-left: -2%;
   padding-right: 18px;
   position: relative;
   text-align: right;
@@ -250,7 +249,7 @@ section#conteudo article#resume div#content-resume ul#float-right-resume li span
 section#conteudo article#resume div#content-education ul#float-left-education {
   top: -16px;
   float: left;
-  margin-left: -8%;
+  margin-left: -2%;
   padding-right: 18px;
   position: relative;
   text-align: right;

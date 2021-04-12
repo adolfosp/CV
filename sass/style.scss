@@ -39,7 +39,7 @@
             @mixin ul-left {
                 top: -16px;
                 float: left;
-                margin-left: -8%;
+                margin-left: -2%;
                 padding-right: 18px;
                 position: relative;
                 text-align: right;
@@ -93,7 +93,7 @@
             section#conteudo {
                 grid-area: conteudo;
                 background-color: #FFFFFF;
-                height: 160vh;
+                // height: 160vh;
                 article#Home {
                     section.session-finale {
                         @include session-finale();

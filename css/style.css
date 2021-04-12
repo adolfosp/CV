@@ -217,7 +217,7 @@ section#conteudo article#resume div#content-resume ul#float-left-resume li {
   font-weight: bolder;
   height: 100px;
 }
-section#conteudo article#resume div#content-resume ul#float-left-resume li span#current {
+section#conteudo article#resume div#content-resume ul#float-left-resume li span.current {
   background-color: #ffd42d;
   border-radius: 5px;
   padding: 4px;
@@ -240,7 +240,52 @@ section#conteudo article#resume div#content-resume ul#float-right-resume li {
   line-height: 25px;
   height: 100px;
 }
-section#conteudo article#resume div#content-resume ul#float-right-resume li span.profissao {
+section#conteudo article#resume div#content-resume ul#float-right-resume li span.destaque_span {
+  background-color: darkorange;
+  border-radius: 5px;
+  padding: 4px;
+  color: black;
+  font-weight: bolder;
+}
+section#conteudo article#resume div#content-education ul#float-left-education {
+  top: -16px;
+  float: left;
+  margin-left: -8%;
+  padding-right: 18px;
+  position: relative;
+  text-align: right;
+  width: 53%;
+  list-style: none;
+  line-height: 28px;
+}
+section#conteudo article#resume div#content-education ul#float-left-education li {
+  font-weight: bolder;
+  height: 100px;
+}
+section#conteudo article#resume div#content-education ul#float-left-education li span.current {
+  background-color: #ffd42d;
+  border-radius: 5px;
+  padding: 4px;
+}
+section#conteudo article#resume div#content-education ul#float-left-education li span.data {
+  background-color: black;
+  border-radius: 5px;
+  padding: 4px;
+  color: white;
+}
+section#conteudo article#resume div#content-education ul#float-right-education {
+  margin-left: 95px;
+  list-style: none;
+  padding-right: 18px;
+  position: relative;
+  text-align: left;
+  width: 63%;
+}
+section#conteudo article#resume div#content-education ul#float-right-education li {
+  line-height: 25px;
+  height: 100px;
+}
+section#conteudo article#resume div#content-education ul#float-right-education li span.destaque_span {
   background-color: darkorange;
   border-radius: 5px;
   padding: 4px;

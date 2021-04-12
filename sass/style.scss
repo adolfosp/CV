@@ -61,7 +61,7 @@
                 height: 100px;
             }
             
-            @mixin span-prof($color) {
+            @mixin span-dest($color) {
                 background-color: $color;
                 border-radius: 5px;
                 padding: 4px;
@@ -237,11 +237,11 @@
                             li {
                                 font-weight: bolder;
                                 @include li-height();
-                                span#current {
-                                    @include span-prof(#ffd42d);
+                                span.current {
+                                    @include span-dest(#ffd42d);
                                 }
                                 span.data {
-                                    @include span-prof(black);
+                                    @include span-dest(black);
                                     color: white;
                                 }
                             }
@@ -251,8 +251,36 @@
                             li {
                                 line-height: 25px;
                                 @include li-height();
-                                span.profissao {
-                                    @include span-prof(darkorange);
+                                span.destaque_span {
+                                    @include span-dest(darkorange);
+                                    color: black;
+                                    font-weight: bolder;
+                                }
+                            }
+                        }
+                    }
+                    div#content-education {
+                        ul#float-left-education {
+                            @include ul-left();
+                            li {
+                                font-weight: bolder;
+                                @include li-height();
+                                span.current {
+                                    @include span-dest(#ffd42d);
+                                }
+                                span.data {
+                                    @include span-dest(black);
+                                    color: white;
+                                }
+                            }
+                        }
+                        ul#float-right-education {
+                            @include ul-right();
+                            li {
+                                line-height: 25px;
+                                @include li-height();
+                                span.destaque_span {
+                                    @include span-dest(darkorange);
                                     color: black;
                                     font-weight: bolder;
                                 }

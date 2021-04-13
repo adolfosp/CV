@@ -1,543 +1,682 @@
-            @mixin menu_item {
-                list-style: none;
-                width: auto;
-                margin: 0px;
-                border-bottom: 0.5px solid lightgray;
-                border-right: 0.5px solid lightgray;
-            }
-            
-            @mixin section_content {
-                margin: 150px 50px 0px 50px;
-                text-align: center;
-            }
-            
-            @mixin h1_section {
-                text-align: center;
-                font-family: 'Roboto Slab', serif;
-                font-size: 50px;
-                margin: 50px 0px 0px 0px;
-            }
-            
-            @mixin h3_section {
-                text-align: center;
-                font-family: 'Roboto Slab', serif;
-                color: #999;
-                font-size: 17px;
-            }
-            
-            @mixin h2_before {
-                content: "";
-                background-color: #ffd42d;
-                width: 20px;
-                height: 8px;
-                z-index: 10;
-                position: absolute;
-                bottom: 30px;
-                left: 49%;
-            }
-            
-            @mixin ul-left {
-                top: -16px;
-                float: left;
-                margin-left: -2%;
-                padding-right: 18px;
-                position: relative;
-                text-align: right;
-                width: 53%;
-                list-style: none;
-                line-height: 28px;
-            }
-            
-            @mixin ul-right {
-                margin-left: 95px;
-                list-style: none;
-                padding-right: 18px;
-                position: relative;
-                text-align: left;
-                width: 63%;
-            }
-            
-            @mixin li-height {
-                height: 100px;
-            }
-            
-            @mixin span-dest($color) {
-                background-color: $color;
-                border-radius: 5px;
-                padding: 4px;
-            }
-            
-            @mixin session-finale {
-                padding-top: 140px;
-                padding-left: 48%;
-                p {
-                    font-family: 'Source Sans Pro', sans-serif;
-                    font-weight: bolder;
-                }
-            }
-            
-            .grid-container {
-                display: grid;
-                grid-template-columns: 1fr 5fr;
-                grid-template-rows: 1fr;
-                gap: 0px 0px;
-                grid-template-areas: "menu conteudo";
-                background-color: #EAEAEA;
-            }
-            
-            body {
-                margin: 120px 260px 120px 260px;
-                background-color: #EAEAEA;
-            }
-            
-            section#conteudo {
-                grid-area: conteudo;
-                background-color: #FFFFFF;
-                // height: 160vh;
-                article#Home {
-                    section.session-finale {
-                        @include session-finale();
-                    }
-                    p#conteudo-about {
-                        padding: 0px 80px;
-                        font-size: 16px;
-                        line-height: 27px;
-                        font-weight: 400;
-                        font-family: 'Source Sans Pro', sans-serif;
-                        font-style: italic;
-                        color: #999;
-                    }
-                    h1 {
-                        @include h1_section();
-                    }
-                    .h2-before {
-                        position: relative;
-                        font-family: 'Roboto Slab', serif;
-                        font-size: 18px;
-                        &::before {
-                            @include h2_before();
-                        }
-                    }
-                    h3 {
-                        @include h3_section();
-                    }
-                    section#about-me {
-                        @include section_content();
-                    }
-                    section#personal-info {
-                        @include section_content();
-                        #content-personal {
-                            margin-top: 80px;
-                        }
-                        ul#float-left-personal {
-                            @include ul-left();
-                            li {
-                                font-family: 'Roboto Slab', serif;
-                                font-size: 15px;
+                             :root {
+                                margin: 0;
+                                padding: 0;
                             }
-                        }
-                        ul#float-right-personal {
-                            @include ul-right();
-                            li {
+                            
+                            @mixin menu_item {
+                                list-style: none;
+                                width: auto;
+                                margin: 0px;
+                                border-bottom: 0.5px solid lightgray;
+                                border-right: 0.5px solid lightgray;
+                            }
+                            
+                            @mixin section_content {
+                                margin: 150px 50px 0px 50px;
+                                text-align: center;
+                            }
+                            
+                            @mixin h1_section {
+                                text-align: center;
                                 font-family: 'Roboto Slab', serif;
-                                font-size: 15px;
+                                font-size: 50px;
+                                margin: 50px 0px 0px 0px;
+                            }
+                            
+                            @mixin h3_section {
+                                text-align: center;
+                                font-family: 'Roboto Slab', serif;
                                 color: #999;
-                                font-weight: 200;
+                                font-size: 17px;
+                            }
+                            
+                            @mixin h2_before {
+                                content: "";
+                                background-color: #ffd42d;
+                                width: 20px;
+                                height: 8px;
+                                z-index: 10;
+                                position: absolute;
+                                bottom: 30px;
+                                left: 49%;
+                            }
+                            
+                            @mixin ul-left {
+                                top: -16px;
+                                float: left;
+                                margin-left: -8%;
+                                padding-right: 18px;
+                                position: relative;
+                                text-align: right;
+                                width: 53%;
+                                list-style: none;
                                 line-height: 28px;
                             }
-                        }
-                        &::after {
-                            background-color: #eaeaea;
-                            content: " ";
-                            height: 23%;
-                            left: 55.5vw;
-                            position: absolute;
-                            top: 750px;
-                            width: 1px;
-                            z-index: 0;
-                        }
-                    }
-                    section#contact-info {
-                        @include section_content();
-                        #content-contact {
-                            margin-top: 80px;
-                        }
-                        ul#float-left-contact {
-                            top: -16px;
-                            float: left;
-                            margin-left: -8%;
-                            padding-right: 18px;
-                            position: relative;
-                            text-align: right;
-                            width: 53%;
-                            list-style: none;
-                            line-height: 35px;
-                            li {
-                                font-family: 'Roboto Slab', serif;
-                                font-size: 15px;
-                                a {
-                                    display: inline;
-                                }
+                            
+                            @mixin ul-right {
+                                margin-left: 95px;
+                                list-style: none;
+                                padding-right: 18px;
+                                position: relative;
+                                text-align: left;
+                                width: 63%;
                             }
-                        }
-                        ul#float-right-contact {
-                            margin-left: 95px;
-                            list-style: none;
-                            padding-right: 18px;
-                            position: relative;
-                            text-align: left;
-                            width: 63%;
-                            line-height: 35px;
-                            li {
-                                font-family: 'Roboto Slab', serif;
-                                font-size: 15px;
-                                color: #999;
-                                font-weight: 200;
+                            
+                            @mixin li-height {
+                                height: 100px;
                             }
-                        }
-                        &::after {
-                            background-color: #eaeaea;
-                            content: " ";
-                            height: 18%;
-                            left: 55.5vw;
-                            position: absolute;
-                            top: 1120px;
-                            width: 1px;
-                            z-index: 0;
-                        }
-                    }
-                }
-                article#resume {
-                    section.session-finale {
-                        @include session-finale();
-                    }
-                    h1 {
-                        @include h1_section();
-                    }
-                    .titulo-about {
-                        h2 {
-                            text-align: center;
-                            position: relative;
-                            font-family: 'Roboto Slab', serif;
-                            font-size: 18px;
-                            &::before {
-                                @include h2_before();
+                            
+                            @mixin span-dest($color) {
+                                background-color: $color;
+                                border-radius: 5px;
+                                padding: 4px;
                             }
-                        }
-                    }
-                    h3 {
-                        @include h3_section();
-                    }
-                    section#experience {
-                        @include section_content();
-                    }
-                    div#content-resume {
-                        ul#float-left-resume {
-                            @include ul-left();
-                            li {
-                                font-weight: bolder;
-                                @include li-height();
-                                span.current {
-                                    @include span-dest(#ffd42d);
-                                }
-                                span.data {
-                                    @include span-dest(black);
-                                    color: white;
-                                }
+                            
+                            @mixin span-skill($color) {
+                                border-radius: 50%;
+                                display: inline-block;
+                                height: 7px;
+                                width: 7px;
+                                background-color: $color;
+                                margin: 4px;
                             }
-                        }
-                        ul#float-right-resume {
-                            @include ul-right();
-                            li {
-                                line-height: 25px;
-                                @include li-height();
-                                span.destaque_span {
-                                    @include span-dest(darkorange);
-                                    color: black;
+                            
+                            @mixin session-finale {
+                                padding-top: 140px;
+                                padding-left: 48%;
+                                p {
+                                    font-family: 'Source Sans Pro', sans-serif;
                                     font-weight: bolder;
                                 }
                             }
-                        }
-                    }
-                    div#content-education {
-                        ul#float-left-education {
-                            @include ul-left();
-                            li {
-                                font-weight: bolder;
-                                @include li-height();
-                                span.current {
-                                    @include span-dest(#ffd42d);
+                            
+                            .grid-container {
+                                display: grid;
+                                grid-template-columns: 1fr 5fr;
+                                grid-template-rows: 1fr;
+                                gap: 0px 0px;
+                                grid-template-areas: "menu conteudo";
+                                background-color: #EAEAEA;
+                            }
+                            
+                            body {
+                                margin: 120px 260px 120px 260px;
+                                background-color: #EAEAEA;
+                            }
+                            
+                            section#conteudo {
+                                grid-area: conteudo;
+                                background-color: #FFFFFF;
+                                // height: 160vh;
+                                article#myWork {
+                                    display: grid !important;
+                                    grid-template-columns: repeat(3, 1fr);
+                                    grid-template-rows: repeat(3, 1fr);
+                                    grid-column-gap: 0px;
+                                    grid-row-gap: 0px;
+                                    padding-left: 50px;
                                 }
-                                span.data {
-                                    @include span-dest(black);
-                                    color: white;
+                                article#Home {
+                                    section.session-finale {
+                                        @include session-finale();
+                                    }
+                                    p#conteudo-about {
+                                        padding: 0px 80px;
+                                        font-size: 16px;
+                                        line-height: 27px;
+                                        font-weight: 400;
+                                        font-family: 'Source Sans Pro', sans-serif;
+                                        font-style: italic;
+                                        color: #999;
+                                    }
+                                    h1 {
+                                        @include h1_section();
+                                    }
+                                    .h2-before {
+                                        position: relative;
+                                        font-family: 'Roboto Slab', serif;
+                                        font-size: 18px;
+                                        &::before {
+                                            @include h2_before();
+                                        }
+                                    }
+                                    h3 {
+                                        @include h3_section();
+                                    }
+                                    section#about-me {
+                                        @include section_content();
+                                    }
+                                    section#personal-info {
+                                        @include section_content();
+                                        #content-personal {
+                                            margin-top: 80px;
+                                        }
+                                        ul#float-left-personal {
+                                            @include ul-left();
+                                            li {
+                                                font-family: 'Roboto Slab', serif;
+                                                font-size: 15px;
+                                            }
+                                        }
+                                        ul#float-right-personal {
+                                            @include ul-right();
+                                            li {
+                                                font-family: 'Roboto Slab', serif;
+                                                font-size: 15px;
+                                                color: #999;
+                                                font-weight: 200;
+                                                line-height: 28px;
+                                            }
+                                        }
+                                        &::after {
+                                            background-color: #eaeaea;
+                                            content: " ";
+                                            height: 23%;
+                                            left: 55.5vw;
+                                            position: absolute;
+                                            top: 750px;
+                                            width: 1px;
+                                            z-index: 0;
+                                        }
+                                    }
+                                    section#contact-info {
+                                        @include section_content();
+                                        #content-contact {
+                                            margin-top: 80px;
+                                        }
+                                        ul#float-left-contact {
+                                            top: -16px;
+                                            float: left;
+                                            margin-left: -8%;
+                                            padding-right: 18px;
+                                            position: relative;
+                                            text-align: right;
+                                            width: 53%;
+                                            list-style: none;
+                                            line-height: 35px;
+                                            li {
+                                                font-family: 'Roboto Slab', serif;
+                                                font-size: 15px;
+                                                a {
+                                                    display: inline;
+                                                }
+                                            }
+                                        }
+                                        ul#float-right-contact {
+                                            margin-left: 95px;
+                                            list-style: none;
+                                            padding-right: 18px;
+                                            position: relative;
+                                            text-align: left;
+                                            width: 63%;
+                                            line-height: 35px;
+                                            li {
+                                                font-family: 'Roboto Slab', serif;
+                                                font-size: 15px;
+                                                color: #999;
+                                                font-weight: 200;
+                                            }
+                                        }
+                                        &::after {
+                                            background-color: #eaeaea;
+                                            content: " ";
+                                            height: 18%;
+                                            left: 55.5vw;
+                                            position: absolute;
+                                            top: 1120px;
+                                            width: 1px;
+                                            z-index: 0;
+                                        }
+                                    }
+                                }
+                                article#resume {
+                                    section.session-finale {
+                                        @include session-finale();
+                                    }
+                                    h1 {
+                                        @include h1_section();
+                                    }
+                                    .titulo-about {
+                                        h2 {
+                                            text-align: center;
+                                            position: relative;
+                                            font-family: 'Roboto Slab', serif;
+                                            font-size: 18px;
+                                            &::before {
+                                                @include h2_before();
+                                            }
+                                        }
+                                    }
+                                    h3 {
+                                        @include h3_section();
+                                    }
+                                    section#experience {
+                                        @include section_content();
+                                    }
+                                    div#content-resume {
+                                        ul#float-left-resume {
+                                            @include ul-left();
+                                            li {
+                                                font-weight: bolder;
+                                                @include li-height();
+                                                span.current {
+                                                    @include span-dest(#ffd42d);
+                                                }
+                                                span.data {
+                                                    @include span-dest(black);
+                                                    color: white;
+                                                }
+                                            }
+                                        }
+                                        ul#float-right-resume {
+                                            @include ul-right();
+                                            li {
+                                                line-height: 25px;
+                                                @include li-height();
+                                                span.destaque_span {
+                                                    @include span-dest(darkorange);
+                                                    color: black;
+                                                    font-weight: bolder;
+                                                }
+                                            }
+                                        }
+                                    }
+                                    section#education {
+                                        @include section_content();
+                                    }
+                                    div#content-education {
+                                        ul#float-left-education {
+                                            @include ul-left();
+                                            li {
+                                                font-weight: bolder;
+                                                @include li-height();
+                                                span.current {
+                                                    @include span-dest(#ffd42d);
+                                                }
+                                                span.data {
+                                                    @include span-dest(black);
+                                                    color: white;
+                                                }
+                                            }
+                                        }
+                                        ul#float-right-education {
+                                            @include ul-right();
+                                            li {
+                                                line-height: 25px;
+                                                @include li-height();
+                                                span.destaque_span {
+                                                    @include span-dest(darkorange);
+                                                    color: black;
+                                                    font-weight: bolder;
+                                                }
+                                            }
+                                        }
+                                    }
+                                    div#content-skill {
+                                        ul#float-left-skill {
+                                            @include ul-left();
+                                            li {
+                                                font-weight: bolder;
+                                                @include li-height();
+                                                height: 30px !important;
+                                                div.rating {
+                                                    display: inline-block;
+                                                    span {
+                                                        @include span-skill(#ffd42d);
+                                                    }
+                                                    span.transparent {
+                                                        @include span-skill(#eaeaea);
+                                                    }
+                                                }
+                                                p {
+                                                    display: inline-block;
+                                                }
+                                            }
+                                        }
+                                        ul#float-right-skill {
+                                            @include ul-right();
+                                            li {
+                                                line-height: 20px;
+                                                @include li-height();
+                                                div.skill_destaque {
+                                                    padding-top: 24px;
+                                                    font-weight: bolder;
+                                                    padding-bottom: 17px;
+                                                    font-size: 1.15rem;
+                                                }
+                                                p {
+                                                    padding-top: 0;
+                                                    margin: 0;
+                                                    font-style: italic;
+                                                }
+                                            }
+                                        }
+                                    }
+                                    section#skill {
+                                        @include section_content();
+                                        &::after {
+                                            background-color: #eaeaea;
+                                            content: " ";
+                                            height: 35%;
+                                            left: 55.2vw;
+                                            position: absolute;
+                                            top: 1540px;
+                                            width: 1px;
+                                            z-index: 0;
+                                        }
+                                    }
                                 }
                             }
-                        }
-                        ul#float-right-education {
-                            @include ul-right();
-                            li {
-                                line-height: 25px;
-                                @include li-height();
-                                span.destaque_span {
-                                    @include span-dest(darkorange);
-                                    color: black;
-                                    font-weight: bolder;
+                            
+                            header#menu {
+                                grid-area: menu;
+                                height: 1050px;
+                                ul {
+                                    margin: 0px;
+                                    padding: 0;
+                                    li.li_menu {
+                                        @include menu_item();
+                                        height: 150px;
+                                        a {
+                                            span.spanPrincipal {
+                                                display: block;
+                                                padding: 5px;
+                                                z-index: -3;
+                                            }
+                                            span.spanSecundario {
+                                                display: block;
+                                                font-size: 12px;
+                                                color: lightslategray;
+                                                z-index: -3;
+                                            }
+                                            text-decoration: none;
+                                            background: #ffffff;
+                                            color: #2a2a2a;
+                                            text-transform: uppercase;
+                                            padding: 30px 0;
+                                            display: inline-block;
+                                            height: 100px;
+                                            text-align: center;
+                                            font-family: 'Roboto Slab',
+                                            serif;
+                                            -webkit-transform: translateZ(0);
+                                            transform: translateZ(0);
+                                            position: relative;
+                                            -webkit-transition-property: color;
+                                            transition-property: color;
+                                            -webkit-transition-duration: 0.3s;
+                                            transition-duration: 0.3s;
+                                            width: 100%;
+                                            font-size: 16px;
+                                            &::before {
+                                                content: "";
+                                                position: absolute;
+                                                z-index: -1;
+                                                top: 0;
+                                                left: 0;
+                                                right: 0;
+                                                bottom: 0;
+                                                background: #ffd42d;
+                                                -webkit-transform: scaleX(0);
+                                                transform: scaleX(0);
+                                                -webkit-transform-origin: 0 50%;
+                                                transform-origin: 0 50%;
+                                                -webkit-transition-property: transform;
+                                                transition-property: transform;
+                                                -webkit-transition-duration: 0.3s;
+                                                transition-duration: 0.3s;
+                                                -webkit-transition-timing-function: ease-out;
+                                                transition-timing-function: ease-out;
+                                            }
+                                            &:hover,
+                                            &:focus,
+                                            &:active {
+                                                color: #2a2a2a;
+                                            }
+                                            &:hover::before,
+                                            &:focus::before,
+                                            &:active::before {
+                                                -webkit-transform: scaleX(1);
+                                                -ms-transform: scaleX(1);
+                                                transform: scaleX(1);
+                                            }
+                                            .active::before {
+                                                color: #ffffff;
+                                                content: "";
+                                                position: absolute;
+                                                z-index: -1;
+                                                top: 0;
+                                                bottom: 0;
+                                                left: 0;
+                                                right: 0;
+                                                background: #ffd42d;
+                                                -webkit-transform: scaleX(1);
+                                                -ms-transform: scaleX(1);
+                                                transform: scaleX(1);
+                                                -webkit-transform-origin: 50%;
+                                                -ms-transform-origin: 50%;
+                                                transform-origin: 50%;
+                                                -webkit-transition-property: transform;
+                                                -ms-transition-property: transform;
+                                                transition-property: transform;
+                                                -webkit-transition-duration: 0.3s;
+                                                -ms-transition-duration: 0.3s;
+                                                transition-duration: 0.3s;
+                                                -webkit-transition-timing-function: ease-out;
+                                                -ms-transition-timing-function: ease-out;
+                                                transition-timing-function: ease-out;
+                                            }
+                                            &.active::after {
+                                                pointer-events: none;
+                                                position: absolute;
+                                                z-index: -1;
+                                                content: '';
+                                                border-style: solid;
+                                                -webkit-transition-duration: 0.3s;
+                                                transition-duration: 0.3s;
+                                                -webkit-transition-property: transform;
+                                                transition-property: transform;
+                                                top: 50%;
+                                                margin-top: -25px;
+                                                right: -15px;
+                                                border-width: 25px 0 25px 15px;
+                                                border-color: transparent transparent transparent #ffd42d;
+                                            }
+                                        }
+                                    }
                                 }
                             }
-                        }
-                    }
-                }
-            }
-            
-            header#menu {
-                grid-area: menu;
-                height: 1050px;
-                ul {
-                    margin: 0px;
-                    padding: 0;
-                    li.li_menu {
-                        @include menu_item();
-                        height: 150px;
-                        a {
-                            span.spanPrincipal {
-                                display: block;
-                                padding: 5px;
-                                z-index: -3;
+                            
+                            .image {
+                                @include menu_item();
+                                margin: 0px;
+                                padding: 0px;
+                                img {
+                                    background-size: cover;
+                                    height: auto;
+                                    max-width: 100%;
+                                }
                             }
-                            span.spanSecundario {
-                                display: block;
-                                font-size: 12px;
-                                color: lightslategray;
-                                z-index: -3;
+                            
+                            @media only screen and (max-width: 1200px) {
+                                body {
+                                    margin: 70px 120px 70px 120px
+                                }
+                                .image {
+                                    height: 400px;
+                                    width: auto;
+                                    background-color: hotpink;
+                                }
+                                header#menu {
+                                    min-width: 500px;
+                                    grid-column: 1/6;
+                                    height: auto;
+                                    ul {
+                                        display: flex;
+                                        li.li_menu {
+                                            width: 100%;
+                                        }
+                                    }
+                                }
+                                section#conteudo {
+                                    grid-row: 2/3;
+                                    grid-column: 1/6;
+                                    background-color: white;
+                                    min-width: 500px;
+                                }
                             }
-                            text-decoration: none;
-                            background: #ffffff;
-                            color: #2a2a2a;
-                            text-transform: uppercase;
-                            padding: 30px 0;
-                            display: inline-block;
-                            height: 100px;
-                            text-align: center;
-                            font-family: 'Roboto Slab',
-                            serif;
-                            -webkit-transform: translateZ(0);
-                            transform: translateZ(0);
-                            position: relative;
-                            -webkit-transition-property: color;
-                            transition-property: color;
-                            -webkit-transition-duration: 0.3s;
-                            transition-duration: 0.3s;
-                            width: 100%;
-                            font-size: 16px;
-                            &::before {
-                                content: "";
-                                position: absolute;
-                                z-index: -1;
-                                top: 0;
-                                left: 0;
-                                right: 0;
-                                bottom: 0;
-                                background: #ffd42d;
-                                -webkit-transform: scaleX(0);
-                                transform: scaleX(0);
-                                -webkit-transform-origin: 0 50%;
-                                transform-origin: 0 50%;
-                                -webkit-transition-property: transform;
-                                transition-property: transform;
-                                -webkit-transition-duration: 0.3s;
-                                transition-duration: 0.3s;
-                                -webkit-transition-timing-function: ease-out;
-                                transition-timing-function: ease-out;
+                            
+                            @media only screen and (max-width: 1229px) {
+                                section#conteudo {
+                                    article#Home {
+                                        section#personal-info {
+                                            &::after {
+                                                content: "";
+                                                background-color: transparent;
+                                            }
+                                        }
+                                        section#contact-info {
+                                            &::after {
+                                                content: "";
+                                                background-color: transparent;
+                                            }
+                                        }
+                                    }
+                                    article#resume {
+                                        section#skill {
+                                            &::after {
+                                                content: "";
+                                                background-color: transparent;
+                                            }
+                                            div#content-skill {
+                                                ul#float-right-skill {
+                                                    li {
+                                                        div.skill_destaque {
+                                                            padding-top: 0;
+                                                        }
+                                                        &:nth-last-child(2) {
+                                                            margin-top: 25px;
+                                                        }
+                                                    }
+                                                }
+                                            }
+                                        }
+                                    }
+                                }
+                                ul#float-right-resume {
+                                    li {
+                                        height: 155px !important;
+                                    }
+                                }
+                                ul#float-left-resume {
+                                    li {
+                                        height: 155px !important;
+                                    }
+                                }
                             }
-                            &:hover,
-                            &:focus,
-                            &:active {
-                                color: #2a2a2a;
+                            
+                            @media only screen and(min-width: 1230px) and (max-width: 1300px) {
+                                section#conteudo {
+                                    article#Home {
+                                        section#personal-info {
+                                            &::after {
+                                                background-color: #eaeaea;
+                                                content: " ";
+                                                height: 23%;
+                                                left: 55.8vw;
+                                                position: absolute;
+                                                top: 790px;
+                                                width: 1px;
+                                                z-index: 0;
+                                            }
+                                        }
+                                        section#contact-info {
+                                            &::after {
+                                                background-color: #eaeaea;
+                                                content: " ";
+                                                height: 18%;
+                                                left: 55.8vw;
+                                                position: absolute;
+                                                top: 1190px;
+                                                width: 1px;
+                                                z-index: 0;
+                                            }
+                                        }
+                                        section#skill {
+                                            @include section_content();
+                                            &::after {
+                                                background-color: #eaeaea;
+                                                content: " ";
+                                                height: 35%;
+                                                left: 55.2vw;
+                                                position: absolute;
+                                                top: 1540px;
+                                                width: 1px;
+                                                z-index: 0;
+                                            }
+                                        }
+                                    }
+                                    article#resume {
+                                        section#skill {
+                                            &::after {
+                                                background-color: #eaeaea;
+                                                content: " ";
+                                                height: 35%;
+                                                left: 55.6vw;
+                                                position: absolute;
+                                                top: 1540px;
+                                                width: 1px;
+                                                z-index: 0;
+                                            }
+                                        }
+                                    }
+                                }
                             }
-                            &:hover::before,
-                            &:focus::before,
-                            &:active::before {
-                                -webkit-transform: scaleX(1);
-                                -ms-transform: scaleX(1);
-                                transform: scaleX(1);
+                            
+                            @media only screen and (min-width: 1302px) and (max-width: 1500px) {
+                                body {
+                                    margin: 50px 100px 50px 100px
+                                }
+                                section#conteudo {
+                                    article#Home {
+                                        section#personal-info {
+                                            &::after {
+                                                background-color: #eaeaea;
+                                                content: " ";
+                                                height: 19%;
+                                                left: 56.5vw;
+                                                position: absolute;
+                                                top: 690px;
+                                                width: 1px;
+                                                z-index: 0;
+                                            }
+                                        }
+                                        section#contact-info {
+                                            &::after {
+                                                background-color: #eaeaea;
+                                                content: " ";
+                                                height: 16%;
+                                                left: 56.5vw;
+                                                position: absolute;
+                                                top: 1060px;
+                                                width: 1px;
+                                                z-index: 0;
+                                            }
+                                        }
+                                    }
+                                    article#resume {
+                                        section#skill {
+                                            &::after {
+                                                background-color: #eaeaea;
+                                                content: " ";
+                                                height: 35%;
+                                                left: 56.5vw;
+                                                position: absolute;
+                                                top: 1470px;
+                                                width: 1px;
+                                                z-index: 0;
+                                            }
+                                        }
+                                    }
+                                }
                             }
-                            .active::before {
-                                color: #ffffff;
-                                content: "";
-                                position: absolute;
-                                z-index: -1;
-                                top: 0;
-                                bottom: 0;
-                                left: 0;
-                                right: 0;
-                                background: #ffd42d;
-                                -webkit-transform: scaleX(1);
-                                -ms-transform: scaleX(1);
-                                transform: scaleX(1);
-                                -webkit-transform-origin: 50%;
-                                -ms-transform-origin: 50%;
-                                transform-origin: 50%;
-                                -webkit-transition-property: transform;
-                                -ms-transition-property: transform;
-                                transition-property: transform;
-                                -webkit-transition-duration: 0.3s;
-                                -ms-transition-duration: 0.3s;
-                                transition-duration: 0.3s;
-                                -webkit-transition-timing-function: ease-out;
-                                -ms-transition-timing-function: ease-out;
-                                transition-timing-function: ease-out;
-                            }
-                            &.active::after {
-                                pointer-events: none;
-                                position: absolute;
-                                z-index: -1;
-                                content: '';
-                                border-style: solid;
-                                -webkit-transition-duration: 0.3s;
-                                transition-duration: 0.3s;
-                                -webkit-transition-property: transform;
-                                transition-property: transform;
-                                top: 50%;
-                                margin-top: -25px;
-                                right: -15px;
-                                border-width: 25px 0 25px 15px;
-                                border-color: transparent transparent transparent #ffd42d;
-                            }
-                        }
-                    }
-                }
-            }
-            
-            .image {
-                @include menu_item();
-                margin: 0px;
-                padding: 0px;
-                img {
-                    background-size: cover;
-                    height: auto;
-                    max-width: 100%;
-                }
-            }
-            
-            @media only screen and (max-width: 1200px) {
-                body {
-                    margin: 70px 120px 70px 120px
-                }
-                .image {
-                    height: 400px;
-                    width: auto;
-                    background-color: hotpink;
-                }
-                header#menu {
-                    min-width: 500px;
-                    grid-column: 1/6;
-                    height: auto;
-                    ul {
-                        display: flex;
-                        li.li_menu {
-                            width: 100%;
-                        }
-                    }
-                }
-                section#conteudo {
-                    grid-row: 2/3;
-                    grid-column: 1/6;
-                    background-color: white;
-                    min-width: 500px;
-                }
-            }
-            
-            @media only screen and (max-width: 1229px) {
-                section#conteudo {
-                    article#Home {
-                        section#personal-info {
-                            &::after {
-                                content: "";
-                                background-color: transparent;
-                            }
-                        }
-                        section#contact-info {
-                            &::after {
-                                content: "";
-                                background-color: transparent;
-                            }
-                        }
-                    }
-                }
-                ul#float-right-resume {
-                    li {
-                        height: 155px !important;
-                    }
-                }
-                ul#float-left-resume {
-                    li {
-                        height: 155px !important;
-                    }
-                }
-            }
-            
-            @media only screen and(min-width: 1230px) and (max-width: 1300px) {
-                section#conteudo {
-                    article#Home {
-                        section#personal-info {
-                            &::after {
-                                background-color: #eaeaea;
-                                content: " ";
-                                height: 23%;
-                                left: 55.8vw;
-                                position: absolute;
-                                top: 790px;
-                                width: 1px;
-                                z-index: 0;
-                            }
-                        }
-                        section#contact-info {
-                            &::after {
-                                background-color: #eaeaea;
-                                content: " ";
-                                height: 18%;
-                                left: 55.8vw;
-                                position: absolute;
-                                top: 1190px;
-                                width: 1px;
-                                z-index: 0;
-                            }
-                        }
-                    }
-                }
-            }
-            
-            @media only screen and (min-width: 1302px) and (max-width: 1500px) {
-                body {
-                    margin: 50px 100px 50px 100px
-                }
-                section#conteudo {
-                    article#Home {
-                        section#personal-info {
-                            &::after {
-                                background-color: #eaeaea;
-                                content: " ";
-                                height: 19%;
-                                left: 56.5vw;
-                                position: absolute;
-                                top: 690px;
-                                width: 1px;
-                                z-index: 0;
-                            }
-                        }
-                        section#contact-info {
-                            &::after {
-                                background-color: #eaeaea;
-                                content: " ";
-                                height: 16%;
-                                left: 56.5vw;
-                                position: absolute;
-                                top: 1060px;
-                                width: 1px;
-                                z-index: 0;
-                            }
-                        }
-                    }
-                }
-            }

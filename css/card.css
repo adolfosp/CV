@@ -1,0 +1,87 @@
+@import url(https://fonts.googleapis.com/css?family=Varela+Round);
+.card {
+    background: #1f2124;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.4);
+    border-radius: 5px;
+    margin: 50px 20px 20px 20px;
+    /* 1/3 minus the margins (20+20) */
+    padding: 20px;
+    text-align: center;
+    color: white;
+}
+
+#doctor-strange {
+    background-image: url('../img/doctorStrange.png');
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+
+
+/* @media (max-width: 768px) {
+    .card {
+        margin: 10px 20px;
+        width: calc(100% - 40px);
+    }
+    .card:first-child {
+        margin-top: 20px;
+    }
+}
+
+@media (max-width: 768px) {
+    .card:nth-child(2) {
+        margin: 10px 20px;
+        width: calc(100% - 40px);
+    }
+} */
+
+.card .title {
+    font-size: 25px;
+}
+
+.card .icon {
+    margin: 50px 0;
+}
+
+.card .icon svg {
+    width: 100px;
+    height: 100px;
+}
+
+.card .icon svg path {
+    fill: #ffd42d;
+}
+
+#doctor-strange .features {
+    margin-top: 250px;
+}
+
+.card .features ul {
+    padding: 0;
+    margin: 20px 0 50px 0;
+    list-style-type: none;
+}
+
+.card .features ul li {
+    margin: 10px 0;
+    font-size: 14px;
+}
+
+.card .features ul li span {
+    border-bottom: 2px dotted #ffd42d;
+}
+
+.card .btn {
+    display: block;
+    background: #ffd42d;
+    color: black;
+    padding: 15px 20px;
+    margin: 20px 0;
+    border-radius: 5px;
+    box-shadow: rgba(0, 0, 0, 0.9);
+    transition: all 200ms ease-in-out;
+    text-decoration: none;
+}
+
+.card .btn:hover {
+    background: #f68657;
+}

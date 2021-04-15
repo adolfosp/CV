@@ -305,6 +305,7 @@
                                 li {
                                     font-weight: bolder;
                                     @include li-height();
+                                    height: 30px !important;
                                     div.rating {
                                         display: inline-block;
                                         span {
@@ -325,6 +326,17 @@
                                 li {
                                     line-height: 25px;
                                     @include li-height();
+                                    div.skill_destaque {
+                                        padding-top: 24px;
+                                        font-weight: bolder;
+                                        padding-bottom: 17px;
+                                        font-size: 1.15rem;
+                                    }
+                                    p {
+                                        padding-top: 0;
+                                        margin: 0;
+                                        font-style: italic;
+                                    }
                                 }
                             }
                         }

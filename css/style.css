@@ -309,6 +309,7 @@ section#conteudo article#resume div#content-skill ul#float-left-skill {
 section#conteudo article#resume div#content-skill ul#float-left-skill li {
   font-weight: bolder;
   height: 100px;
+  height: 30px !important;
 }
 section#conteudo article#resume div#content-skill ul#float-left-skill li div.rating {
   display: inline-block;
@@ -344,6 +345,17 @@ section#conteudo article#resume div#content-skill ul#float-right-skill {
 section#conteudo article#resume div#content-skill ul#float-right-skill li {
   line-height: 25px;
   height: 100px;
+}
+section#conteudo article#resume div#content-skill ul#float-right-skill li div.skill_destaque {
+  padding-top: 24px;
+  font-weight: bolder;
+  padding-bottom: 17px;
+  font-size: 1.15rem;
+}
+section#conteudo article#resume div#content-skill ul#float-right-skill li p {
+  padding-top: 0;
+  margin: 0;
+  font-style: italic;
 }
 section#conteudo article#resume section#skill {
   margin: 150px 50px 0px 50px;

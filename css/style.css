@@ -1,3 +1,8 @@
+:root {
+  margin: 0;
+  padding: 0;
+}
+
 .grid-container {
   display: grid;
   grid-template-columns: 1fr 5fr;
@@ -15,6 +20,14 @@ body {
 section#conteudo {
   grid-area: conteudo;
   background-color: #FFFFFF;
+}
+section#conteudo article#myWork {
+  display: grid !important;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(3, 1fr);
+  grid-column-gap: 0px;
+  grid-row-gap: 0px;
+  padding-left: 50px;
 }
 section#conteudo article#Home section.session-finale {
   padding-top: 140px;
@@ -332,7 +345,6 @@ section#conteudo article#resume div#content-skill ul#float-left-skill li div.rat
 }
 section#conteudo article#resume div#content-skill ul#float-left-skill li p {
   display: inline-block;
-  padding: 6px;
 }
 section#conteudo article#resume div#content-skill ul#float-right-skill {
   margin-left: 95px;
@@ -343,7 +355,7 @@ section#conteudo article#resume div#content-skill ul#float-right-skill {
   width: 63%;
 }
 section#conteudo article#resume div#content-skill ul#float-right-skill li {
-  line-height: 25px;
+  line-height: 20px;
   height: 100px;
 }
 section#conteudo article#resume div#content-skill ul#float-right-skill li div.skill_destaque {
@@ -360,6 +372,16 @@ section#conteudo article#resume div#content-skill ul#float-right-skill li p {
 section#conteudo article#resume section#skill {
   margin: 150px 50px 0px 50px;
   text-align: center;
+}
+section#conteudo article#resume section#skill::after {
+  background-color: #eaeaea;
+  content: " ";
+  height: 35%;
+  left: 55.2vw;
+  position: absolute;
+  top: 1540px;
+  width: 1px;
+  z-index: 0;
 }
 
 header#menu {
@@ -534,6 +556,16 @@ header#menu ul li.li_menu a.active::after {
     content: "";
     background-color: transparent;
   }
+  section#conteudo article#resume section#skill::after {
+    content: "";
+    background-color: transparent;
+  }
+  section#conteudo article#resume section#skill div#content-skill ul#float-right-skill li div.skill_destaque {
+    padding-top: 0;
+  }
+  section#conteudo article#resume section#skill div#content-skill ul#float-right-skill li:nth-last-child(2) {
+    margin-top: 25px;
+  }
 
   ul#float-right-resume li {
     height: 155px !important;
@@ -564,6 +596,30 @@ header#menu ul li.li_menu a.active::after {
     width: 1px;
     z-index: 0;
   }
+  section#conteudo article#Home section#skill {
+    margin: 150px 50px 0px 50px;
+    text-align: center;
+  }
+  section#conteudo article#Home section#skill::after {
+    background-color: #eaeaea;
+    content: " ";
+    height: 35%;
+    left: 55.2vw;
+    position: absolute;
+    top: 1540px;
+    width: 1px;
+    z-index: 0;
+  }
+  section#conteudo article#resume section#skill::after {
+    background-color: #eaeaea;
+    content: " ";
+    height: 35%;
+    left: 55.6vw;
+    position: absolute;
+    top: 1540px;
+    width: 1px;
+    z-index: 0;
+  }
 }
 @media only screen and (min-width: 1302px) and (max-width: 1500px) {
   body {
@@ -587,6 +643,16 @@ header#menu ul li.li_menu a.active::after {
     left: 56.5vw;
     position: absolute;
     top: 1060px;
+    width: 1px;
+    z-index: 0;
+  }
+  section#conteudo article#resume section#skill::after {
+    background-color: #eaeaea;
+    content: " ";
+    height: 35%;
+    left: 56.5vw;
+    position: absolute;
+    top: 1470px;
     width: 1px;
     z-index: 0;
   }

@@ -21,7 +21,7 @@ section#conteudo {
   grid-area: conteudo;
   background-color: #FFFFFF;
 }
-section#conteudo article#myWork {
+section#conteudo article#mywork {
   display: grid !important;
   grid-template-columns: repeat(3, 1fr);
   grid-template-rows: repeat(3, 1fr);

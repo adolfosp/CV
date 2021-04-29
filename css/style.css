@@ -517,6 +517,36 @@ header#menu ul li.li_menu a.active::after {
   max-width: 100%;
 }
 
+.css {
+  background-color: #1387C7;
+  padding: 3px;
+  border-radius: 4px;
+}
+
+.scss {
+  background-color: #CE6B9E;
+  padding: 3px;
+  border-radius: 4px;
+}
+
+.js {
+  background-color: #EFD81D;
+  padding: 3px;
+  border-radius: 4px;
+}
+
+.html {
+  background-color: #F4470B;
+  padding: 3px;
+  border-radius: 4px;
+}
+
+.grunt {
+  background-color: #F3A418;
+  padding: 3px;
+  border-radius: 4px;
+}
+
 @media only screen and (max-width: 1200px) {
   body {
     margin: 70px 120px 70px 120px;

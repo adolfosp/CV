@@ -16,6 +16,12 @@
     background-repeat: no-repeat;
 }
 
+#rock-roll {
+    background-image: url('../img/rockRo.png');
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+
 
 /* @media (max-width: 768px) {
     .card {
@@ -51,7 +57,8 @@
     fill: #ffd42d;
 }
 
-#doctor-strange .features {
+#doctor-strange .features,
+#rock-roll .features {
     margin-top: 250px;
 }
 
@@ -68,6 +75,7 @@
 
 .card .features ul li span {
     border-bottom: 2px dotted #ffd42d;
+    font-size: 20px;
 }
 
 .card .btn {

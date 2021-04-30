@@ -21,7 +21,7 @@ section#conteudo {
   grid-area: conteudo;
   background-color: #FFFFFF;
 }
-section#conteudo article#mywork {
+section#conteudo article#mywork div#grid {
   display: grid !important;
   grid-template-columns: repeat(3, 1fr);
   grid-template-rows: repeat(3, 1fr);
@@ -39,7 +39,7 @@ section#conteudo article#Home section.session-finale p {
 }
 section#conteudo article#Home p#conteudo-about {
   padding: 0px 80px;
-  font-size: 16px;
+  font-size: 20px;
   line-height: 27px;
   font-weight: 400;
   font-family: "Source Sans Pro", sans-serif;
@@ -555,7 +555,6 @@ header#menu ul li.li_menu a.active::after {
   .image {
     height: 400px;
     width: auto;
-    background-color: hotpink;
   }
 
   header#menu {
@@ -568,6 +567,7 @@ header#menu ul li.li_menu a.active::after {
   }
   header#menu ul li.li_menu {
     width: 100%;
+    border-left: 0.5px solid black;
   }
 
   section#conteudo {
@@ -644,7 +644,7 @@ header#menu ul li.li_menu a.active::after {
     background-color: #eaeaea;
     content: " ";
     height: 35%;
-    left: 55.6vw;
+    left: 56.6vw;
     position: absolute;
     top: 1540px;
     width: 1px;

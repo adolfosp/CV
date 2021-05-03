@@ -383,6 +383,14 @@ section#conteudo article#resume section#skill::after {
   width: 1px;
   z-index: 0;
 }
+section#conteudo article#mywork section.session-finale {
+  padding-top: 140px;
+  padding-left: 48%;
+}
+section#conteudo article#mywork section.session-finale p {
+  font-family: "Source Sans Pro", sans-serif;
+  font-weight: bolder;
+}
 
 header#menu {
   grid-area: menu;
@@ -609,22 +617,28 @@ header#menu ul li.li_menu a.active::after {
   section#conteudo article#Home section#personal-info::after {
     background-color: #eaeaea;
     content: " ";
-    height: 23%;
-    left: 55.8vw;
+    height: 20%;
+    left: 54vw;
     position: absolute;
-    top: 790px;
+    top: 890px;
     width: 1px;
     z-index: 0;
+  }
+  section#conteudo article#Home section#personal-info #content-personal {
+    margin-left: -40px;
   }
   section#conteudo article#Home section#contact-info::after {
     background-color: #eaeaea;
     content: " ";
-    height: 18%;
-    left: 55.8vw;
+    height: 19%;
+    left: 53.8vw;
     position: absolute;
-    top: 1190px;
+    top: 1250px;
     width: 1px;
     z-index: 0;
+  }
+  section#conteudo article#Home section#contact-info #content-contact {
+    margin-left: -40px;
   }
   section#conteudo article#Home section#skill {
     margin: 150px 50px 0px 50px;

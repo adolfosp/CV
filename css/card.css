@@ -26,7 +26,7 @@
     background-image: url('../img/CSharpLogo.png');
     background-size: contain;
     background-repeat: no-repeat;
-    padding-top: 350px;
+    padding-top: 315px;
 }
 
 
@@ -81,7 +81,6 @@
 }
 
 .card .features ul li span {
-    border-bottom: 2px dotted #ffd42d;
     font-size: 20px;
 }
 

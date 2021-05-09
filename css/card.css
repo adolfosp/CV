@@ -22,6 +22,13 @@
     background-repeat: no-repeat;
 }
 
+#csharp-certificado {
+    background-image: url('../img/CSharpLogo.png');
+    background-size: contain;
+    background-repeat: no-repeat;
+    padding-top: 350px;
+}
+
 
 /* @media (max-width: 768px) {
     .card {

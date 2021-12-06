@@ -1,3 +1,8 @@
+:root {
+  margin: 0;
+  padding: 0;
+}
+
 .grid-container {
   display: grid;
   grid-template-columns: 1fr 5fr;
@@ -16,6 +21,14 @@ section#conteudo {
   grid-area: conteudo;
   background-color: #FFFFFF;
 }
+section#conteudo article#mywork div#grid {
+  display: grid !important;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(3, 1fr);
+  grid-column-gap: 0px;
+  grid-row-gap: 0px;
+  padding-left: 50px;
+}
 section#conteudo article#Home section.session-finale {
   padding-top: 140px;
   padding-left: 48%;
@@ -26,7 +39,7 @@ section#conteudo article#Home section.session-finale p {
 }
 section#conteudo article#Home p#conteudo-about {
   padding: 0px 80px;
-  font-size: 16px;
+  font-size: 20px;
   line-height: 27px;
   font-weight: 400;
   font-family: "Source Sans Pro", sans-serif;
@@ -332,7 +345,6 @@ section#conteudo article#resume div#content-skill ul#float-left-skill li div.rat
 }
 section#conteudo article#resume div#content-skill ul#float-left-skill li p {
   display: inline-block;
-  padding: 6px;
 }
 section#conteudo article#resume div#content-skill ul#float-right-skill {
   margin-left: 95px;
@@ -343,7 +355,7 @@ section#conteudo article#resume div#content-skill ul#float-right-skill {
   width: 63%;
 }
 section#conteudo article#resume div#content-skill ul#float-right-skill li {
-  line-height: 25px;
+  line-height: 20px;
   height: 100px;
 }
 section#conteudo article#resume div#content-skill ul#float-right-skill li div.skill_destaque {
@@ -360,6 +372,24 @@ section#conteudo article#resume div#content-skill ul#float-right-skill li p {
 section#conteudo article#resume section#skill {
   margin: 150px 50px 0px 50px;
   text-align: center;
+}
+section#conteudo article#resume section#skill::after {
+  background-color: #eaeaea;
+  content: " ";
+  height: 35%;
+  left: 55.2vw;
+  position: absolute;
+  top: 1540px;
+  width: 1px;
+  z-index: 0;
+}
+section#conteudo article#mywork section.session-finale {
+  padding-top: 140px;
+  padding-left: 48%;
+}
+section#conteudo article#mywork section.session-finale p {
+  font-family: "Source Sans Pro", sans-serif;
+  font-weight: bolder;
 }
 
 header#menu {
@@ -495,6 +525,54 @@ header#menu ul li.li_menu a.active::after {
   max-width: 100%;
 }
 
+.css {
+  background-color: #1387C7;
+  padding: 3px;
+  border-radius: 4px;
+}
+
+.scss {
+  background-color: #CE6B9E;
+  padding: 3px;
+  border-radius: 4px;
+}
+
+.js {
+  background-color: #EFD81D;
+  padding: 3px;
+  border-radius: 4px;
+}
+
+.html {
+  background-color: #F4470B;
+  padding: 3px;
+  border-radius: 4px;
+}
+
+.grunt {
+  background-color: #F3A418;
+  padding: 3px;
+  border-radius: 4px;
+}
+
+.c-sharp {
+  background-color: #690081;
+  padding: 3px;
+  border-radius: 4px;
+}
+
+.asp-net {
+  background-color: #1259A2;
+  padding: 3px;
+  border-radius: 4px;
+}
+
+.mvc {
+  background-color: gray;
+  padding: 3px;
+  border-radius: 4px;
+}
+
 @media only screen and (max-width: 1200px) {
   body {
     margin: 70px 120px 70px 120px;
@@ -503,7 +581,6 @@ header#menu ul li.li_menu a.active::after {
   .image {
     height: 400px;
     width: auto;
-    background-color: hotpink;
   }
 
   header#menu {
@@ -516,6 +593,7 @@ header#menu ul li.li_menu a.active::after {
   }
   header#menu ul li.li_menu {
     width: 100%;
+    border-left: 0.5px solid black;
   }
 
   section#conteudo {
@@ -534,6 +612,16 @@ header#menu ul li.li_menu a.active::after {
     content: "";
     background-color: transparent;
   }
+  section#conteudo article#resume section#skill::after {
+    content: "";
+    background-color: transparent;
+  }
+  section#conteudo article#resume section#skill div#content-skill ul#float-right-skill li div.skill_destaque {
+    padding-top: 0;
+  }
+  section#conteudo article#resume section#skill div#content-skill ul#float-right-skill li:nth-last-child(2) {
+    margin-top: 25px;
+  }
 
   ul#float-right-resume li {
     height: 155px !important;
@@ -547,20 +635,50 @@ header#menu ul li.li_menu a.active::after {
   section#conteudo article#Home section#personal-info::after {
     background-color: #eaeaea;
     content: " ";
-    height: 23%;
-    left: 55.8vw;
+    height: 20%;
+    left: 54vw;
     position: absolute;
-    top: 790px;
+    top: 890px;
     width: 1px;
     z-index: 0;
+  }
+  section#conteudo article#Home section#personal-info #content-personal {
+    margin-left: -40px;
   }
   section#conteudo article#Home section#contact-info::after {
     background-color: #eaeaea;
     content: " ";
-    height: 18%;
-    left: 55.8vw;
+    height: 19%;
+    left: 53.8vw;
     position: absolute;
-    top: 1190px;
+    top: 1250px;
+    width: 1px;
+    z-index: 0;
+  }
+  section#conteudo article#Home section#contact-info #content-contact {
+    margin-left: -40px;
+  }
+  section#conteudo article#Home section#skill {
+    margin: 150px 50px 0px 50px;
+    text-align: center;
+  }
+  section#conteudo article#Home section#skill::after {
+    background-color: #eaeaea;
+    content: " ";
+    height: 35%;
+    left: 55.2vw;
+    position: absolute;
+    top: 1540px;
+    width: 1px;
+    z-index: 0;
+  }
+  section#conteudo article#resume section#skill::after {
+    background-color: #eaeaea;
+    content: " ";
+    height: 35%;
+    left: 56.6vw;
+    position: absolute;
+    top: 1540px;
     width: 1px;
     z-index: 0;
   }
@@ -587,6 +705,16 @@ header#menu ul li.li_menu a.active::after {
     left: 56.5vw;
     position: absolute;
     top: 1060px;
+    width: 1px;
+    z-index: 0;
+  }
+  section#conteudo article#resume section#skill::after {
+    background-color: #eaeaea;
+    content: " ";
+    height: 35%;
+    left: 56.5vw;
+    position: absolute;
+    top: 1470px;
     width: 1px;
     z-index: 0;
   }

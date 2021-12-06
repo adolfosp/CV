@@ -1,42 +1,30 @@
 {
-  "name": "EasyTabs",
+  "name": "easytabs",
   "description": "The jQuery EasyTabs plugin handles all of the functionality of tabs and none of the styling.",
   "version": "3.2.0",
   "keywords": [
     "tabs"
   ],
   "maintainers": [
-    {
-      "name": "Steve Schwartz",
-      "email": "steve@alfajango.com",
-      "web": "http://www.alfajango.com/blog"
-    }
+    "Steve Schwartz <steve@alfajango.com> (http://www.alfajango.com/blog)"
   ],
   "contributors": [
-    {
-      "name": "Steve Schwartz",
-      "email": "steve@alfajango.com",
-      "web": "http://www.alfajango.com/blog"
-    }
+    "Steve Schwartz <steve@alfajango.com> (http://www.alfajango.com/blog)"
   ],
-  "dependencies": {
-    "jquery": ["1.4.3","1.5","1.6","1.7"]
-  },
   "optionalDependencies": {
-    "hashchange": "",
-    "address": ""
+    "address": "",
+    "hashchange": ""
   },
   "demos": [
     "/examples/demo.html"
   ],
   "bugs": {
-    "mail": "support@alfajango.com",
-    "web": "https://github.com/jangosteve/jquery-easytabs/issues"
+    "url": "https://github.com/jangosteve/jquery-easytabs/issues"
   },
   "repositories": [
     {
       "type": "git",
-      "url": "https://github.com/jangosteve/jquery-easytabs.git"
+      "url": "git+https://github.com/jangosteve/jquery-easytabs.git"
     }
   ],
   "licenses": [
@@ -50,5 +38,20 @@
     }
   ],
   "homepage": "http://www.alfajango.com/blog/jquery-easytabs-plugin/",
-  "main": "/lib/jquery.easytabs.min.js"
+  "main": "/lib/jquery.easytabs.min.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jangosteve/jquery-easytabs.git"
+  },
+  "directories": {
+    "test": "test"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "grunt": "^1.4.1"
+  }
 }

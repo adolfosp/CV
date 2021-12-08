@@ -561,6 +561,12 @@ header#menu ul li.li_menu a.active::after {
   border-radius: 4px;
 }
 
+.bem {
+  background-color: #690081;
+  padding: 3px;
+  border-radius: 4px;
+}
+
 .asp-net {
   background-color: #1259A2;
   padding: 3px;
